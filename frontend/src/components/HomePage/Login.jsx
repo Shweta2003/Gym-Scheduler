@@ -12,7 +12,7 @@ const Login = () => {
     const HandleSubmit = (e) => {
         e.preventDefault();
         axios
-            .get("http://localhost:8081/login", {
+            .get("https://gym-scheduler-01.onrender.com/login", {
                 params: { name: name, password: pass }
             })
             .then((res) => {
