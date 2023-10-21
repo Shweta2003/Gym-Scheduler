@@ -19,6 +19,7 @@ const Gymdet = () => {
             })
             .then((res) => {
                 setdata(res.data[0]);
+                console.log(res.data[0]);
             })
             .catch((error) => {
                 console.error("Error while making the POST request:", error);
