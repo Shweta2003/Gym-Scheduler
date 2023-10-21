@@ -13,22 +13,20 @@ const Homepage = () => {
   const HandleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8081/register", {
+      .post("https://gym-scheduler-01.onrender.com/register", {
         name: name,
         password: pass
       })
       .then(() => {
         alert("Account create Successfully!!")
+        navigate(`/main/${name}`, { state: { name: name } })
       })
       .catch((error) => {
         console.error("Error while making the POST request:", error);
         alert("Caanot create account, try again by a different usename")
+        setname("")
+        setpass("")
       });
-
-    setname("")
-    setpass("")
-
-    navigate(`/main/${name}`, { state: { name: name } })
   }
 
   const HandleIt = () => {
