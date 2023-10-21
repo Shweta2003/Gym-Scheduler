@@ -15,7 +15,7 @@ const GymdetUpdate = () => {
   useEffect(() => {
     console.log(location.state.name);
     axios
-      .get("http://localhost:8081/gym_details", {
+      .get("https://gym-scheduler-01.onrender.com/gym_details", {
         params: { name: location.state.name }
       })
       .then((res) => {
@@ -29,7 +29,7 @@ const GymdetUpdate = () => {
   const onClick = () => {
 
     axios
-      .post("http://localhost:8081/update_gym_details", {
+      .post("https://gym-scheduler-01.onrender.com/update_gym_details", {
         name: data.NAME,
         address: data.ADDRESS,
         ocontact: data.OCONTACT,
