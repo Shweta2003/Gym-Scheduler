@@ -8,6 +8,7 @@ app.use(cors());
 
 const db1 = mysql.createPool({
     host: "localhost",
+    port: 3306,
     user: "root",
     password:"",
     database:"gym_scheduler"
