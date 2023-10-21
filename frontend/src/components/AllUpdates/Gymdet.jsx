@@ -13,9 +13,10 @@ const Gymdet = () => {
 
     useEffect(() => {
         console.log(location.state.name);
+        const name = location.state.name;
         axios
             .get("https://gym-scheduler-01.onrender.com/gym_details", {
-                params: { name: location.state.name }
+                params: { name: name }
             })
             .then((res) => {
                 setdata(res.data[0]);
