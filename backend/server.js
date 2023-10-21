@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const db1 = mysql.createConnection({
+const db1 = mysql.createPool({
     host: "localhost",
     user: "root",
     password:"",
