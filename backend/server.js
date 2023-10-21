@@ -245,7 +245,7 @@ app.post('/update_machine_on_schedule_d', (req,res) => {
 })
 
 
-app.listen("https://gym-scheduler-01.onrender.com", () => {
+app.listen(8081, () => {
     console.log("listening");
 })
 
