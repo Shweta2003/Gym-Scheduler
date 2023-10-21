@@ -56,7 +56,8 @@
 ![image](https://github.com/Shweta2003/Gym-Scheduler/assets/65994349/d4f903e6-d044-4b2b-89ed-101bbcdce4ad)
 ![image](https://github.com/Shweta2003/Gym-Scheduler/assets/65994349/f89400ca-540e-407a-9429-1ea2eba19b8f)
 ![image](https://github.com/Shweta2003/Gym-Scheduler/assets/65994349/4c2cf188-329d-4032-b5fe-1c6722e77586)
-
+##
+##
 # update customer details
 ![image](https://github.com/Shweta2003/Gym-Scheduler/assets/65994349/39c0784c-b37f-4382-9d94-0adbb106355a)
 ![image](https://github.com/Shweta2003/Gym-Scheduler/assets/65994349/2cedcfdd-bcab-45e2-aa8a-062b5b4d4096)
