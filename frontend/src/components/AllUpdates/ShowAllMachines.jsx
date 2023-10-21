@@ -10,7 +10,7 @@ const ShowAllMachines = () => {
     useEffect(() => {
         console.log(location.state.name);
         axios
-            .get("http://localhost:8081/machine_details", {
+            .get("https://gym-scheduler-01.onrender.com/machine_details", {
                 params: { name: location.state.name }
             })
             .then((res) => {
