@@ -11,7 +11,7 @@ const RemoveMachine = () => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8081/machine_details", {
+            .get("https://gym-scheduler-01.onrender.com/machine_details", {
                 params: { name: location.state.name }
             })
             .then((res) => {
@@ -26,7 +26,7 @@ const RemoveMachine = () => {
         e.preventDefault();
 
         axios
-        .post("http://localhost:8081/update_machine", {
+        .post("https://gym-scheduler-01.onrender.com/update_machine", {
           id: curID.MACHINE_ID,
           username: location.state.name,
           total: curID.TOT_ITEMS
