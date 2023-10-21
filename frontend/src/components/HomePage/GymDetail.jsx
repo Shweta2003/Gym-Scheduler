@@ -16,7 +16,7 @@ const GymDetail = () => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:8081/register_tab", {
+      .post("https://gym-scheduler-01.onrender.com/register_tab", {
         name: name,
         username: location.state.name,
         address: address,
