@@ -22,7 +22,7 @@ const UpdateCUstomer = () => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8081/customers", {
+            .get("https://gym-scheduler-01.onrender.com/customers", {
                 params: { name: location.state.name }
             })
             .then((res) => {
@@ -35,7 +35,7 @@ const UpdateCUstomer = () => {
 
     const shedule = (time) => {
         axios
-            .get("http://localhost:8081/machine_details", {
+            .get("https://gym-scheduler-01.onrender.com/machine_details", {
                 params: { name: location.state.name }
             })
             .then((res) => {
@@ -80,7 +80,7 @@ const UpdateCUstomer = () => {
         if (id === null) { alert("Select customer ID") }
         else {
             axios
-                .get("http://localhost:8081/customer_details", {
+                .get("https://gym-scheduler-01.onrender.com/customer_details", {
                     params: { name: location.state.name, id: id }
                 })
                 .then((res) => {
@@ -109,7 +109,7 @@ const UpdateCUstomer = () => {
 
     const onClick = () => {
         axios
-            .post("http://localhost:8081/update_customer", {
+            .post("https://gym-scheduler-01.onrender.com/update_customer", {
                 username: location.state.name,
                 id: cust_det.CUSTOMER_ID,
                 name: cust_det.CUSTOMER_NAME,
@@ -161,7 +161,7 @@ const UpdateCUstomer = () => {
 
                 // add new item
                 axios
-                    .post("http://localhost:8081/update_machine_on_schedule_i", {
+                    .post("https://gym-scheduler-01.onrender.com/update_machine_on_schedule_i", {
                         id: value,
                         col: col,
                         username: location.state.name
@@ -175,7 +175,7 @@ const UpdateCUstomer = () => {
 
                 // remove old item
                 axios
-                    .post("http://localhost:8081/update_machine_on_schedule_d", {
+                    .post("https://gym-scheduler-01.onrender.com/update_machine_on_schedule_d", {
                         id: schedule[keya],
                         col: col,
                         username: location.state.name
@@ -190,7 +190,7 @@ const UpdateCUstomer = () => {
             }
         }
         axios
-            .post("http://localhost:8081/update_schedule", {
+            .post("https://gym-scheduler-01.onrender.com/update_schedule", {
                 id: cust_det.CUSTOMER_ID,
                 data: newSchedule,
                 username: location.state.name
