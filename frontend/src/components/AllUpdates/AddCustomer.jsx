@@ -23,7 +23,7 @@ const AddCustomer = () => {
 
   const shedule = (time) => {
     axios
-      .get("http://localhost:8081/machine_details", {
+      .get("https://gym-scheduler-01.onrender.com/machine_details", {
         params: { name: location.state.name }
       })
       .then((res) => {
@@ -66,7 +66,7 @@ const AddCustomer = () => {
 
   const onClick = () => {
     axios
-      .post("http://localhost:8081/add_new_customer", {
+      .post("https://gym-scheduler-01.onrender.com/add_new_customer", {
         username: location.state.name,
         id: custID,
         name: custName,
@@ -116,7 +116,7 @@ const AddCustomer = () => {
         }
 
       axios
-        .post("http://localhost:8081/update_machine_on_schedule_i", {
+        .post("https://gym-scheduler-01.onrender.com/update_machine_on_schedule_i", {
           id: value,
           col: col,
           username: location.state.name
@@ -129,7 +129,7 @@ const AddCustomer = () => {
         });
     }
     axios
-      .post("http://localhost:8081/add_schedule", {
+      .post("https://gym-scheduler-01.onrender.com/add_schedule", {
         id: custID,
         data: newSchedule,
         username: location.state.name
