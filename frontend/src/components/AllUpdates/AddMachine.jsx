@@ -16,7 +16,7 @@ const AddMachine = () => {
     useEffect(() => {
       console.log(location.state.name);
       axios
-          .get("http://localhost:8081/machine_details", {
+          .get("https://gym-scheduler-01.onrender.com/machine_details", {
               params: { name: location.state.name }
           })
           .then((res) => {
@@ -40,7 +40,7 @@ const AddMachine = () => {
 
         if(a === true){
           axios
-        .post("http://localhost:8081/update_machine", {
+        .post("https://gym-scheduler-01.onrender.com/update_machine", {
           id: machineID,
           username: location.state.name,
           total: totalitems
@@ -55,7 +55,7 @@ const AddMachine = () => {
         });
         }else{
           axios
-        .post("http://localhost:8081/add_machine", {
+        .post("https://gym-scheduler-01.onrender.com/add_machine", {
           id: machineID,
           username: location.state.name,
           name: machineName,
