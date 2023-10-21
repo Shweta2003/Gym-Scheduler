@@ -12,7 +12,7 @@ const ShowCustomer = () => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8081/customers", {
+            .get("https://gym-scheduler-01.onrender.com/customers", {
                 params: { name: location.state.name }
             })
             .then((res) => {
@@ -28,7 +28,7 @@ const ShowCustomer = () => {
         else {
             console.log("here")
             axios
-                .get("http://localhost:8081/customer_details", {
+                .get("https://gym-scheduler-01.onrender.com/customer_details", {
                     params: { name: location.state.name, id: id }
                 })
                 .then((res) => {
@@ -39,7 +39,7 @@ const ShowCustomer = () => {
                 });
 
             axios
-                .get("http://localhost:8081/customer_schedule", {
+                .get("https://gym-scheduler-01.onrender.com/customer_schedule", {
                     params: { name: location.state.name, id: id }
                 })
                 .then((res) => {
