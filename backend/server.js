@@ -7,8 +7,7 @@ app.use(express.json());
 app.use(cors());
 
 const db1 = mysql.createPool({
-    host: "localhost",
-    port: 3306,
+    host: "localhost,
     user: "root",
     password:"",
     database:"gym_scheduler"
@@ -246,7 +245,7 @@ app.post('/update_machine_on_schedule_d', (req,res) => {
 })
 
 
-app.listen(443, () => {
+app.listen(8081, () => {
     console.log("listening");
 })
 
